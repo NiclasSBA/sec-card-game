@@ -1,45 +1,66 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {subscribeToTimer} from './api';
+import { Provider } from 'react-redux'
+import { BrowserRouter as Router,Route, Link, Switch} from "react-router-dom";
+import Dashboard from "./Components/DashBoard";
+import Home from "./Components/Home";
+
 
 class App extends Component {
   constructor(props) {
     super(props);
-    subscribeToTimer((err, timestamp) => this.setState({ 
-      timestamp
-    }));
-  }
-  state = {
-    timestamp: 'no timestamp yet'
-  };
+  
 
+  };
+  
+  
+  
   
   render() {
+    
+  
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+         
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          This is the timer value: {this.state.timestamp}
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          
+         
+          <nav>
+          <div>
+    <nav>
+    
+    </nav>
+    <div>
+ 
+    <Router>
+   
+     
+
+    
+      <Switch >
+      <Route exact path="/" component={Home} />
+      <Route path="/DashBoard" component={Dashboard} />
+       
+        <Route render={() => <h1>Page not found</h1>} />
+      </Switch>
+      
+  
+  </Router>
+  
+    </div>
+  </div>
+    </nav>
         </header>
         <ul id="messages"></ul>
     <form action="">
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+   
+ 
     
       </div>
     );

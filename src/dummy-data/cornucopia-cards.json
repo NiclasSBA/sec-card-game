@@ -1,0 +1,1142 @@
+{
+  "cards": {
+    "dataValidationEncoding": [
+      {
+        "number": "A",
+        "description": "You have invented a new attack against data validation and encoding",
+        "helptext": "Read more about this topic in OWASP's free cheatsheets on inputvalidation, XSS prevention, SQL injection prevention and Query parameterization"
+      },
+
+      {
+        "number": "2",
+        "description": "Brian can gather information about the underlying configurations, shemas, logic, code, software, services and infrastucture due to the content of error messages, poor configuration, the presence of default installation files or tests, backups or copies of resources, or exposure of source code",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": [
+            "69",
+            "107-109",
+            "136",
+            "137",
+            "153",
+            "156",
+            "158",
+            "162"
+          ],
+          "owasp-asvs": ["1.10", "4.5", "8.1", "11.5", "19.1", "19.5"],
+          "owasp-appsensor": ["HT1-3"],
+          "capec": ["54", "541"],
+          "safecode": ["4", "23"]
+        }
+      },
+      {
+        "number": "3",
+        "description": "Robert can input malicious data because the allowed protocol format is not being checked, or duplicates are accepted, the structure is not being verified, the individual data elements are not being validated for format type, range, length and a whitelist of allowed characters or formats",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["8", "9", "11-14", "16", "159", "190", "191"],
+          "owasp-asvs": [
+            "5.1",
+            "5.16",
+            "5.17",
+            "5.18",
+            "5.19",
+            "5.20",
+            "11.1",
+            "11.2"
+          ],
+          "owasp-appsensor": [
+            "RE7-8",
+            "AE4-7",
+            "HE2-3",
+            "CIE1",
+            "CIE3-4",
+            "HT1-3"
+          ],
+          "capec": [
+            "28",
+            "48",
+            "126",
+            "165",
+            "213",
+            "220",
+            "221",
+            "261",
+            "261",
+            "262",
+            "271",
+            "272"
+          ],
+          "safecode": ["3", "16", "24", "35"]
+        }
+      },
+      {
+        "number": "4",
+        "description": "Dave can input malicious field names or data because it is not being checked within the current user and process",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["8", "10", "183"],
+          "owasp-asvs": ["4.16", "5.16", "5.17", "15.1"],
+          "owasp-appsensor": [
+            "RE3-6",
+            "AE8-11",
+            "SE1",
+            "SE3-6",
+            "IE2-4",
+            "HT1-3"
+          ],
+          "capec": [
+            "28",
+            "31",
+            "48",
+            "126",
+            "162",
+            "165",
+            "213",
+            "220",
+            "221",
+            "261"
+          ],
+          "safecode": ["24", "35"]
+        }
+      },
+      {
+        "number": "5",
+        "description": "Jee can bypass the centralized encoding routines, since they are not being used everywhere, or the wrong encodings are being used",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["3", "15", "18-22", "168"],
+          "owasp-asvs": ["1.7", "5.15", "5.21", "5.22", "5.23"],
+          "owasp-appsensor": [],
+          "capec": ["28", "31", "152", "160", "468"],
+          "safecode": ["2", "17"]
+        }
+      },
+      {
+        "number": "6",
+        "description": "Jason can bypass the centralized validation routines since they are not being used on all inputs",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["3", "168"],
+          "owasp-asvs": ["1.7", "5.6", "5.19"],
+          "owasp-appsensor": ["IE2-3"],
+          "capec": ["28"],
+          "safecode": ["3", "16", "24"]
+        }
+      },
+      {
+        "number": "6",
+        "description": "Jan craft special special payloads to foil input validation, because the character set is not specified/enforced. or the data is encoded multiple times, or the data is not fully converted into the same format the application uses(e.g. canonicalization) before being validated, or variables are not strongly typed",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["4", "5", "7", "150"],
+          "owasp-asvs": ["5.6", "11.8"],
+          "owasp-appsensor": ["IE2-3", "EE1-2"],
+          "capec": ["28", "153", "165"],
+          "safecode": ["3", "16", "24"]
+        }
+      },
+      {
+        "number": "8",
+        "description": "Sarah can bypass the centralized sanitation routines, since they are not being used comprehensively",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["15", "169"],
+          "owasp-asvs": ["1.7", "5.21", "5.23"],
+          "owasp-appsensor": [],
+          "capec": ["28", "31", "152", "160", "468"],
+          "safecode": ["2", "17"]
+        }
+      },
+      {
+        "number": "9",
+        "description": "Shamun can bypass input or output validation checks because validation failures are not rejected and/or sanitized",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["6", "21", "22", "168"],
+          "owasp-asvs": ["5.3"],
+          "owasp-appsensor": ["HE2-3"],
+          "capec": ["28"],
+          "safecode": ["3", "16", "24"]
+        }
+      },
+      {
+        "number": "10",
+        "description": "Dario can exploit the trust the application places in a source of data(e.g. user-definable data, manipulation of locally stored data, alteration to data on a client device, lack of verification of identity during data validation, such as Dario can pretend to be Colin)",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["2", "19", "92", "95", "180"],
+          "owasp-asvs": [
+            "5.19",
+            "10.6",
+            "16.2",
+            "16.3",
+            "16.4",
+            "16.5",
+            "16.8"
+          ],
+          "owasp-appsensor": ["HE4", "HE5"],
+          "capec": [
+            "12",
+            "51",
+            "57",
+            "90",
+            "111",
+            "145",
+            "194",
+            "195",
+            "202",
+            "218",
+            "463"
+          ],
+          "safecode": ["14"]
+        }
+      },
+      {
+        "number": "J",
+        "description": "Dennis has control over input validation, output validation or output encoding, or routines so they can be bypassed",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["1"],
+          "owasp-asvs": ["5.5", "5.18"],
+          "owasp-appsensor": ["RE3", "RE4"],
+          "capec": ["87", "207", "554"],
+          "safecode": ["2", "17"]
+        }
+      },
+      {
+        "number": "Q",
+        "description": "George can inject data into a client or device side interpreter, because a parameterized interface is not being used, has not been implemented correctly, the data has not been correctly encoded for the context, or there is no restrictive policy on code or data includes",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["10", "15", "16", "19", "20"],
+          "owasp-asvs": ["5.15", "5.22", "5.23", "5.24", "5.25"],
+          "owasp-appsensor": ["IE1", "RP3"],
+          "capec": ["28", "31", "152", "160", "468"],
+          "safecode": ["2", "17"]
+        }
+      },
+      {
+        "number": "K",
+        "description": "Gabe can inject data into a server-side interpreter(e.g. SQL injection, OS commands, Xpath, server javascript, SMTP) because a strongly typed parameterized interface is not being used or has not been implemented properly",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["15", "19-22", "167", "180", "204", "211", "212"],
+          "owasp-asvs": [
+            "5.10",
+            "5.11",
+            "5.12",
+            "5.13",
+            "5.14",
+            "5.16",
+            "5.21"
+          ],
+          "owasp-appsensor": ["CIE1-2"],
+          "capec": ["23", "28", "76", "152", "160", "261"],
+          "safecode": ["2", "19", "20"]
+        }
+      }
+    ],
+    "authentication": [
+      {
+        "number": "A",
+        "description": "You have invented a new attack against authentication",
+        "helptext": "Read more about this on OWASPs free Authentication cheatsheet",
+        "help-resources": {
+          "owasp-scp": [""],
+          "owasp-asvs": [""],
+          "owasp-appsensor": [""],
+          "capec": [""],
+          "safecode": [""]
+        }
+      },
+      {
+        "number": "2",
+        "description": "James can undertake authentication functions without the real user ever being awaren of this has occurres (e.g. attempt to log in, log in with stolen credentials, reset the password",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["47,52"],
+          "owasp-asvs": ["2.12", "8.4", "8.10"],
+          "owasp-appsensor": ["UT1"],
+          "capec": [],
+          "safecode": ["28"]
+        }
+      },
+      {
+        "number": "3",
+        "description": "Muhammad can obtain a user's password or other secrets, such as security questions, by observation during entry, from a local cache, from memory, in transit, reading it from some unprotected location, because it is widely known, because it never expires, or because the user cannor change her own password",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": [
+            "36",
+            "37",
+            "40",
+            "43",
+            "48",
+            "51",
+            "119",
+            "139",
+            "140",
+            "146"
+          ],
+          "owasp-asvs": [
+            "2.2",
+            "2.17",
+            "2.24",
+            "8.7",
+            "9.1",
+            "9.4",
+            "9.5",
+            "9.9",
+            "9.11"
+          ],
+          "owasp-appsensor": [],
+          "capec": ["37", "546"],
+          "safecode": ["28"]
+        }
+      },
+      {
+        "number": "4",
+        "description": "Sebastian can easily identify user names or can enumerate them",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["33, 53"],
+          "owasp-asvs": ["2.18", "2.28"],
+          "owasp-appsensor": ["AE1"],
+          "capec": ["383"],
+          "safecode": ["28"]
+        }
+      },
+      {
+        "number": "5",
+        "description": "Javier can use default, test or easily guessable credentials to authenticate, or can use an old account or an account nto neccessary for the application",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["54", "175", "178"],
+          "owasp-asvs": ["2.19"],
+          "owasp-appsensor": ["AE12", "HT3"],
+          "capec": ["70"],
+          "safecode": ["28"]
+        }
+      },
+      {
+        "number": "6",
+        "description": "Sven can reuse a temporary password, because the user does not have to change it on first use, it has too long or no expiration, it does not have an out-of-band delivery method(e.g. post, mobile app, SMS)",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["37", "45", "46", "178"],
+          "owasp-asvs": ["2.22"],
+          "owasp-appsensor": [],
+          "capec": ["50"],
+          "safecode": ["28"]
+        }
+      },
+      {
+        "number": "7",
+        "description": "Cecilia can use brute force and dictionary attacks against one or many accounts without limit, or these attacks are simplified due to insufficient complexity, length, expiration, and re-use requirements for passwords",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["33", "38", "39", "41", "50", "53"],
+          "owasp-asvs": ["2.7", "2.20", "2.23", "2.25", "2.27"],
+          "owasp-appsensor": ["AE2", "AE3"],
+          "capec": ["2", "16"],
+          "safecode": ["27"]
+        }
+      },
+      {
+        "number": "8",
+        "description": "Kate can bypass authentication because it does not fail secure( i.e. it defaults to allowing unauthenticated access)",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["28"],
+          "owasp-asvs": ["2.6"],
+          "owasp-appsensor": [],
+          "capec": ["115"],
+          "safecode": ["28"]
+        }
+      },
+      {
+        "number": "9",
+        "description": "Claudia can undertake more critical functions because authentication requirements are too weak (e.g. does not use strong authentication, such as 2-factor) or there is no requirements to re-authenticate to these",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["55", "56"],
+          "owasp-asvs": ["2.1", "2.9", "2.26", "2.31", "4.15"],
+          "owasp-appsensor": [],
+          "capec": ["21"],
+          "safecode": ["14", "28"]
+        }
+      },
+      {
+        "number": "10",
+        "description": "Pravin can bypass authentication controls because a centralized standard, tested, proven and approved authentication module/framework/service seperate to the resource being requested, is not being used.",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["25", "26", "27"],
+          "owasp-asvs": ["1.17", "2.30"],
+          "owasp-appsensor": [],
+          "capec": ["90", "115"],
+          "safecode": ["14", "28"]
+        }
+      },
+      {
+        "number": "J",
+        "description": "Mark can access resources or services because there is no authentication requirement, or it was mistakenly assumed that authentication would be undertaken by some other system or performed in some previous action",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["23", "32", "34"],
+          "owasp-asvs": ["2.1"],
+          "owasp-appsensor": [],
+          "capec": ["115"],
+          "safecode": ["14", "28"]
+        }
+      },
+      {
+        "number": "Q",
+        "description": "Jamie can bypass authentication because it is not enforced with equal riqor for all types of authentication functionality(e.g. register, password change, password recovery, logout, administration) or across all versions/channels (e.g. mobile website, mobile app, full website, API, call centre)",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["23", "29", "42", "49"],
+          "owasp-asvs": ["2.1", "2.8"],
+          "owasp-appsensor": [""],
+          "capec": ["36", "50", "115", "121", "179"],
+          "safecode": ["14", "28"]
+        }
+      },
+      {
+        "number": "K",
+        "description": "Olga can influence or alter authentication code/routines so they can be bypassed",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["24"],
+          "owasp-asvs": ["2.4", "13.2"],
+          "owasp-appsensor": [],
+          "capec": ["115", "207", "554"],
+          "safecode": ["14", "28"]
+        }
+      }
+    ],
+    "sessionManagement": [
+      {
+        "number": "A",
+        "description": "You have invented a new attack against session management",
+        "helptext": "Read more about this topic in OWASP's free cheat sheets on session management, and Cross-site request forgery(CSRF) prevention",
+        "help-resources": {
+          "owasp-scp": [""],
+          "owasp-asvs": [""],
+          "owasp-appsensor": [""],
+          "capec": [],
+          "safecode": [""]
+        }
+      },
+      {
+        "number": "2",
+        "description": "William has control over the generation of session identifiers",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["58", "59"],
+          "owasp-asvs": ["3.10"],
+          "owasp-appsensor": ["SE2"],
+          "capec": ["31", "60", "61"],
+          "safecode": ["28"]
+        }
+      },
+      {
+        "number": "3",
+        "description": "Ryan can use a single account in parallel since concurrent sessions are allowed",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["68"],
+          "owasp-asvs": ["3.16", "3.17", "3.18"],
+          "owasp-appsensor": [],
+          "capec": [],
+          "safecode": ["28"]
+        }
+      },
+      {
+        "number": "4",
+        "description": "Alison can set session identification cookies on another web application because the domain and path are not restricted sufficiently",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["59", "61"],
+          "owasp-asvs": ["3.12"],
+          "owasp-appsensor": ["SE2"],
+          "capec": ["31", "61"],
+          "safecode": ["28"]
+        }
+      },
+      {
+        "number": "5",
+        "description": "John can predict or guess session identifiers because they are not changed when the user's role alters (e.g. pre & post authentication) and when the switching between non-encrypted and encrypted communications, or are not being sufficiently long or are not being changed periodically",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["60", "62", "66", "67", "71", "72"],
+          "owasp-asvs": ["3.2", "3.7", "3.11"],
+          "owasp-appsensor": ["SE4-6"],
+          "capec": ["31"],
+          "safecode": ["28"]
+        }
+      },
+      {
+        "number": "6",
+        "description": "Gary can take over a user's session because there is a long or no inactivity timeout, a long or no overall session time limit, or the same session can be used from more than one device/location",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["64", "65"],
+          "owasp-asvs": ["3.3", "3.4", "3.16", "3.17", "3.18"],
+          "owasp-appsensor": ["SE5", "SE6"],
+          "capec": ["21"],
+          "safecode": ["28"]
+        }
+      },
+      {
+        "number": "7",
+        "description": "Casey can utilize Adam's session after he has finished, because there is no log out function, he can't easily log out, or logout does not properly terminate the session",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["62", "63"],
+          "owasp-asvs": ["3.2", "3.5"],
+          "owasp-appsensor": [],
+          "capec": ["21"],
+          "safecode": ["28"]
+        }
+      },
+      {
+        "number": "8",
+        "description": "Matt can abuse long sessions because the application does not require periodic re-authentication to check if privileges have changed",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["96"],
+          "owasp-asvs": [],
+          "owasp-appsensor": [],
+          "capec": ["21"],
+          "safecode": ["28"]
+        }
+      },
+      {
+        "number": "9",
+        "description": "Ivan can steal session identifiers because they are sent over insecure channels, or are logged, or are revealed in error messages, included in urls, or are accessible un-neccessarily by code which the attacker can influence or alter",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["69", "75", "76", "119", "138"],
+          "owasp-asvs": ["3.6", "8.7", "10.3"],
+          "owasp-appsensor": ["SE4-6"],
+          "capec": ["31", "60"],
+          "safecode": ["28"]
+        }
+      },
+      {
+        "number": "10",
+        "description": "Marce can forge requests because per-session, or per-request for more critical actions, strong random tokens(i.e. anti CSRF tokens) are not being used for actions that change state",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["73", "74"],
+          "owasp-asvs": ["4.13"],
+          "owasp-appsensor": ["IE4"],
+          "capec": ["62", "111"],
+          "safecode": ["18"]
+        }
+      },
+      {
+        "number": "J",
+        "description": "Jeff can resend an identical repeat interaction (e.g. HTTP request, signal, button press) and it is accepted, not rejected.",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": [],
+          "owasp-asvs": ["15.1", "15,2"],
+          "owasp-appsensor": ["IE5"],
+          "capec": ["60"],
+          "safecode": ["12", "14"]
+        }
+      },
+      {
+        "number": "Q",
+        "description": "Salim can bypass session management because it is not applied comprehensively and consistently across the application.",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["58"],
+          "owasp-asvs": ["3.1"],
+          "owasp-appsensor": [],
+          "capec": ["21"],
+          "safecode": ["14", "28"]
+        }
+      },
+      {
+        "number": "K",
+        "description": "Peter can bypass the session management controls because they have been self-build and/or are weak instead of using a standard approves framework or approved tested module",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["58", "60"],
+          "owasp-asvs": ["1.7"],
+          "owasp-appsensor": [],
+          "capec": ["21"],
+          "safecode": ["14", "28"]
+        }
+      }
+    ],
+    "authorization": [
+      {
+        "number": "A",
+        "description": "You have invented a new attack against authorization",
+        "helptext": "Read more about this topic in OWASP's development and testing guides",
+        "help-resources": {
+          "owasp-scp": [""],
+          "owasp-asvs": [""],
+          "owasp-appsensor": [],
+          "capec": [""],
+          "safecode": [""]
+        }
+      },
+      {
+        "number": "2",
+        "description": "Tim can influence where data is sent or being forwarded to",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["44"],
+          "owasp-asvs": ["4.1", "4.16", "16.1"],
+          "owasp-appsensor": [],
+          "capec": ["153"],
+          "safecode": ["8", "10", "11"]
+        }
+      },
+      {
+        "number": "3",
+        "description": "Christian can access information, which they should not have permission to, through another mechanism tha does have permission(e.g. search indexer, logger, reporting, or because it is cached, or kept for longer than neccesary, or other information leakage",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["51", "100", "135", "139", "140", "141", "150"],
+          "owasp-asvs": ["4.1", "8.2", "9.1-9-6", "9.11", "16.6", "16-7"],
+          "owasp-appsensor": [],
+          "capec": ["69", "213"],
+          "safecode": ["8", "10", "11"]
+        }
+      },
+      {
+        "number": "4",
+        "description": "Kelly can bypass authorization controls because they do not fail securely(i.e. they default to allowing access",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["79", "80"],
+          "owasp-asvs": ["4.8"],
+          "owasp-appsensor": [],
+          "capec": ["122"],
+          "safecode": ["8", "10", "11"]
+        }
+      },
+      {
+        "number": "5",
+        "description": "Chad can access resources(including services, processes, AJAX, Flash, video, images, documents, temporary files, session data, system properties, configuration data, registry settings, logs) he should not be able to, due to missing authorization, or due to excessive privileges(e.g. not using principle of least privilege)",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": [
+            "70",
+            "81",
+            "83",
+            "84",
+            "87",
+            "88",
+            "89",
+            "99",
+            "117",
+            "131",
+            "132",
+            "142",
+            "154",
+            "170",
+            "179"
+          ],
+          "owasp-asvs": ["4.1", "4.4", "4.9", "19.3"],
+          "owasp-appsensor": ["ACE1-4", "HT2"],
+          "capec": [
+            "75",
+            "87",
+            "95",
+            "126",
+            "149",
+            "155",
+            "203",
+            "213",
+            "264",
+            "265"
+          ],
+          "safecode": ["8", "10", "11", "13"]
+        }
+      },
+      {
+        "number": "6",
+        "description": "Eduardo can access data he does not have permission to, even though he has permission to the form/page/URL/entry point",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["81", "88", "131"],
+          "owasp-asvs": ["4.1", "4.4"],
+          "owasp-appsensor": ["ACE1-4"],
+          "capec": ["122"],
+          "safecode": ["8", "10", "11"]
+        }
+      },
+      {
+        "number": "7",
+        "description": "Yuanjing can access application functions, objects or properties, he is not authorizes to access",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["81", "85", "86", "131"],
+          "owasp-asvs": ["4.1", "4.4"],
+          "owasp-appsensor": ["ACE1-4"],
+          "capec": ["122"],
+          "safecode": ["8", "10", "11"]
+        }
+      },
+      {
+        "number": "8",
+        "description": "Tom can bypass business rules by altering the usual process sequence or flow, or by undertaking the process in the incorrect order, or by manipulating date and time values used by the application, or by using valid features for unintended purposes, or by othersier manipulating control data",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["10", "32", "93", "94", "189"],
+          "owasp-asvs": ["4.10", "4.15", "4.16", "8.13", "15.1"],
+          "owasp-appsensor": ["ACE3"],
+          "capec": ["25", "39", "74", "162", "166", "207"],
+          "safecode": ["8", "10", "11", "12"]
+        }
+      },
+      {
+        "number": "9",
+        "description": "Mike can misuse an application by using a valid feature too fast, or too frquently, or in another that is not intended, consumes the application's resources or causes race conditions or over-utilizes a feature",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["94"],
+          "owasp-asvs": ["4.14", "15.2"],
+          "owasp-appsensor": ["AE3", "FIO1-2", "UT2-4", "STE1-3"],
+          "capec": ["26", "29", "119", "261"],
+          "safecode": ["1", "35"]
+        }
+      },
+      {
+        "number": "10",
+        "description": "Richard can bypass the centralized authorization controls since they are not being used comprehensively on all interactions",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["78", "91"],
+          "owasp-asvs": ["1.7", "4.11"],
+          "owasp-appsensor": ["ACE1-4"],
+          "capec": ["36", "95", "121", "179"],
+          "safecode": ["8", "10", "11"]
+        }
+      },
+      {
+        "number": "J",
+        "description": "Dinis can access security configuration information or access control lists",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["89", "90"],
+          "owasp-asvs": ["4.10", "13.2"],
+          "owasp-appsensor": [],
+          "capec": ["75", "133", "203"],
+          "safecode": ["8", "10", "11"]
+        }
+      },
+      {
+        "number": "Q",
+        "description": "Christopher can inject a command that the application will run at a higher privilege level",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["209"],
+          "owasp-asvs": ["5.12"],
+          "owasp-appsensor": [],
+          "capec": ["17", "30", "69", "234"],
+          "safecode": ["8", "10", "11"]
+        }
+      },
+      {
+        "number": "K",
+        "description": "Ryan can influence or alter authorization controls and permissions, and can therefore bypass them",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["77", "89", "91"],
+          "owasp-asvs": ["4.9", "4.10", "13.2"],
+          "owasp-appsensor": [],
+          "capec": ["207", "554"],
+          "safecode": ["8", "10", "11"]
+        }
+      }
+    ],
+    "cryptography": [
+      {
+        "number": "A",
+        "description": "You have invented a new attack against cryptography",
+        "helptext": "Read more about this topic in OWASP's free cheat sheets on cryptographic storage, and transport layer protection",
+        "help-resources": {
+          "owasp-scp": [""],
+          "owasp-asvs": [""],
+          "owasp-appsensor": [],
+          "capec": [""],
+          "safecode": [""]
+        }
+      },
+      {
+        "number": "2",
+        "description": "Kyun can access data because it has been obfuscated rather than using an approved cryptographic function",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["105", "133", "135"],
+          "owasp-asvs": [],
+          "owasp-appsensor": [],
+          "capec": [],
+          "safecode": ["21", "29"]
+        }
+      },
+      {
+        "number": "3",
+        "description": "Axel can modify transient or permanent data(stored or in transit), or source code, or updates/patches, or configuration data, because it is not subject to integrity checking",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["92", "205", "212"],
+          "owasp-asvs": [
+            "8.11",
+            "11.7",
+            "13.2",
+            "19.5",
+            "19.6",
+            "19.7",
+            "19.8"
+          ],
+          "owasp-appsensor": ["SE1", "IE4"],
+          "capec": [
+            "31",
+            "39",
+            "68",
+            "75",
+            "133",
+            "145",
+            "162",
+            "203",
+            "438",
+            "439",
+            "442"
+          ],
+          "safecode": ["12", "14"]
+        }
+      },
+      {
+        "number": "4",
+        "description": "Paulo can access data in transit that is not encrypted, even though the channel is encrypted.",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["37", "88", "143", "214"],
+          "owasp-asvs": ["7.12", "9.2"],
+          "owasp-appsensor": [],
+          "capec": ["185", "186", "187"],
+          "safecode": ["14", "29", "30"]
+        }
+      },
+      {
+        "number": "5",
+        "description": "Kyle can bypass cryptographic controls because they do not fail securely(i.e. they default to unprotected)",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["103", "145"],
+          "owasp-asvs": ["7.2", "10.3"],
+          "owasp-appsensor": [],
+          "capec": [],
+          "safecode": ["21", "29"]
+        }
+      },
+      {
+        "number": "6",
+        "description": "Romain can read and modify unencrypted data in memory or in transit (e.g. cryptographic secrets, credentials, session identifiers, personal and commercecially-sensitive data) in use or in communication within the application, or between the the application and users, or between the application and external systems",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["36", "37", "143", "146", "147"],
+          "owasp-asvs": ["2.16", "9.2", "9.11", "10.3", "19.2"],
+          "owasp-appsensor": [],
+          "capec": ["31", "57", "102", "157", "158", "384", "466", "546"],
+          "safecode": ["29"]
+        }
+      },
+      {
+        "number": "7",
+        "description": "Gunter can intercept or modify encrypted data in transit because the protocol is poorly deployed, or weakly configured, or the certificates are invalid or not trusted. or the connection can be degraded to a weaker or un-encrypted communication",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["75", "144", "145"],
+          "owasp-asvs": [
+            "10.1",
+            "10.5",
+            "10.10",
+            "10.11",
+            "10.12",
+            "10.13",
+            "10.14"
+          ],
+          "owasp-appsensor": ["IE4"],
+          "capec": ["31", "216"],
+          "safecode": ["14", "29", "30"]
+        }
+      },
+      {
+        "number": "8",
+        "description": "Eoin can access stored business data(i.e. passwords, session identifiers, PII, cardholder data) because it is not securely encrypted or securely hashed",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["30", "31", "70", "133", "135"],
+          "owasp-asvs": ["2.13", "7.7", "7.8", "9.2"],
+          "owasp-appsensor": [],
+          "capec": ["31", "37", "55"],
+          "safecode": ["21", "29", "31"]
+        }
+      },
+      {
+        "number": "9",
+        "description": "Andy can bypass random number generation, random GUID generation, hashing and encryption functions because they have been self-built and/or are weak",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["60", "104", "105"],
+          "owasp-asvs": ["7.6", "7.7", "7.8", "7.15"],
+          "owasp-appsensor": [],
+          "capec": ["97"],
+          "safecode": ["14", "21", "29", "32", "33"]
+        }
+      },
+      {
+        "number": "10",
+        "description": "Susanna can break the cryptography in use because it is not strong enough for the degree of protection required, or it is not strong enough for the amount of effort the attacker is willing to make",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["104", "105"],
+          "owasp-asvs": [],
+          "owasp-appsensor": [],
+          "capec": ["97", "463"],
+          "safecode": ["14", "21", "29", "31", "32", "33"]
+        }
+      },
+      {
+        "number": "J",
+        "description": "Justin can read credentials for accessing internal or external resources, services and other systems, because they are stored in an unencrypted format, or saved in the source code",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["35", "90", "171", "172"],
+          "owasp-asvs": ["2.29"],
+          "owasp-appsensor": [],
+          "capec": ["116"],
+          "safecode": ["21", "29"]
+        }
+      },
+      {
+        "number": "Q",
+        "description": "Randolph can access or predict the master cryptographic secrets",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["35", "102"],
+          "owasp-asvs": ["7.8", "7.9", "7.11", "7.13", "7.14"],
+          "owasp-appsensor": [],
+          "capec": ["116", "117"],
+          "safecode": ["21", "29"]
+        }
+      },
+      {
+        "number": "K",
+        "description": "Dan can influence or alter cryptography code/routines(encryption, hashing, digital signatures, random number and GUID generation) and can therefor bypass them",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["31", "101"],
+          "owasp-asvs": ["7.11"],
+          "owasp-appsensor": [],
+          "capec": ["207", "554"],
+          "safecode": ["14", "21", "29"]
+        }
+      }
+    ],
+    "cornucopia": [
+      {
+        "number": "A",
+        "description": "You have invented a new attack of any type",
+        "helptext": "Read more about this in OWASP's free guides on requirements, development, code review and testing, the cheat sheet series, and the Open Software Assurance Maturity Model(OWASP SAMM)",
+        "help-resources": {
+          "owasp-scp": [""],
+          "owasp-asvs": [],
+          "owasp-appsensor": [],
+          "capec": [],
+          "safecode": [""]
+        }
+      },
+      {
+        "number": "2",
+        "description": "Lee can bypass application controls because dangerous/risky programming language functions have been used instead of safer alternatives, or there are type conversion errors, or because the application is unreliable when an external resource is unavailable, or there are race conditions, or there are resource intilization, allocation issues, or overflows can occur",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["194", "202", "205-209"],
+          "owasp-asvs": [5.1],
+          "owasp-appsensor": [],
+          "capec": [
+            "25",
+            "26",
+            "29",
+            "96",
+            "123",
+            "124",
+            "128",
+            "129",
+            "264",
+            "265"
+          ],
+          "safecode": ["3", "5", "6", "7", "9", "22", "25", "26", "34"]
+        }
+      },
+      {
+        "number": "3",
+        "description": "Andrew can access source code, or decompile, or otherwise access business logic to understand how the application works and any secrets contained in it",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["134"],
+          "owasp-asvs": ["19.5"],
+          "owasp-appsensor": [],
+          "capec": ["189", "207"],
+          "safecode": [""]
+        }
+      },
+      {
+        "number": "4",
+        "description": "Keith can perform an action and it is not possible to attribute it to him",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["23", "32", "34", "42", "51", "181"],
+          "owasp-asvs": ["8.10"],
+          "owasp-appsensor": [],
+          "capec": [],
+          "safecode": [""]
+        }
+      },
+      {
+        "number": "5",
+        "description": "Larry can influence the trust other parties including users have in the application, or abuse that trust elsewhere(e.g. in another application)",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": [""],
+          "owasp-asvs": [],
+          "owasp-appsensor": [],
+          "capec": ["89", "103", "181", "459"],
+          "safecode": [""]
+        }
+      },
+      {
+        "number": "6",
+        "description": "Aaron can bypass controls because error/exception handling is missing or is implemented inconsistently or partially, or does not deny access by default(i.e. errors should terminate access/execution), or relies on handling by some other service or system",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["109", "110", "111", "112", "155"],
+          "owasp-asvs": ["8.2", "8.4"],
+          "owasp-appsensor": [],
+          "capec": ["54", "98", "164"],
+          "safecode": ["4", "11", "23"]
+        }
+      },
+      {
+        "number": "7",
+        "description": "Mwengu's actions cannot be investigated because there is not an adequate accurately time-stamped record of security events, or there is not a full audit trail, or these can be deleted by Mwengu, or there is no centralized loggin service",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["113", "114", "115", "117", "118", "121-130"],
+          "owasp-asvs": ["2.12", "8.3-2.12", "9.10", "10.4"],
+          "owasp-appsensor": [],
+          "capec": ["93"],
+          "safecode": ["4"]
+        }
+      },
+      {
+        "number": "8",
+        "description": "David can bypass the application to gain access to data because the network and host infrastructure, and supporting services/applications have not been securely configured, the configuration rechecked periodically and security patches applied, or the data stored locally is not physically protected.",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["151", "152", "156", "160", "161", "173-177"],
+          "owasp-asvs": ["19.1", "19.4", "19.6", "19.7", "19.8"],
+          "owasp-appsensor": ["RE1", "RE2"],
+          "capec": ["37","220","310","436","536"],
+          "safecode": []
+        }
+      },
+      {
+        "number": "9",
+        "description": "Michael can bypass the application to gain access to data because administrative tools or administrative interfaces are not secured adequately",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["23","29","56","81","82","84-90"],
+          "owasp-asvs": ["2.1","2.32"],
+          "owasp-appsensor": [],
+          "capec": ["122","233"],
+          "safecode": []
+        }
+      },
+      {
+        "number": "10",
+        "description": "Xavier can circumvent the application's controls because code frameworks, libraries and components contain malicious code or vulnerabilities(e.g. in-house, commercial off-the-shelf, oursourced, open source, externally-located",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["57", "151","152", "204", "205", "213","214"],
+          "owasp-asvs": ["1.11"],
+          "owasp-appsensor": [],
+          "capec": ["68", "438", "439", "442", "524","538"],
+          "safecode": ["15"]
+        }
+      },
+      {
+        "number": "J",
+        "description": "Roman can exploit the application because it was compiled using out-of-date tools or its configuration is not secure by default, or security information was not documented and passed on to operational teams",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["90","137", "148","151-154","175-179", "186", "192"],
+          "owasp-asvs": ["19.5", "19.9"],
+          "owasp-appsensor": [],
+          "capec": [],
+          "safecode": ["4"]
+        }
+      },
+      {
+        "number": "Q",
+        "description": "Jim can undertake malicious non-normal actions without real-time detection and response by the application",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": [],
+          "owasp-asvs": ["4.14","9.8", "15.1", "15.2"],
+          "owasp-appsensor": ["all"],
+          "capec": [],
+          "safecode": ["1", "27"]
+        }
+      },{
+        "number": "K",
+        "description": "Gareth can utilize the application to deny service to some or all of its users",
+        "helptext": "",
+        "help-resources": {
+          "owasp-scp": ["41", "55"],
+          "owasp-asvs": [],
+          "owasp-appsensor": ["UT1-4", "STE3"],
+          "capec": ["2", "25", "119", "125"],
+          "safecode": ["1"]
+        }
+      }
+    ],
+    "wildCards": [
+      {
+        "number": "joker 1",
+        "description": "Alice can utilize the application to attack users' systems and data",
+        "helptext": "Have you thought about becoming an individual OWASP member? All tools, guidance and local meetings are free for everyone, but individual membership helps support OWASP's work",
+        "help-resources": {
+          "owasp-scp": [""],
+          "owasp-asvs": [],
+          "owasp-appsensor": [],
+          "capec": [],
+          "safecode": [""]
+        }
+      },
+      {
+        "number": "joker 2",
+        "description": "Bob can influence, alter or affect the application so that it no longer complies with legal, regulatory, contractual, or other organizational mandates",
+        "helptext": "Examine vulnerabilities and discover how they can be fixed using training applications, in the free OWASP broken VM, or using the online challenges in the free hacking lab",
+        "help-resources": {
+          "owasp-scp": [""],
+          "owasp-asvs": [],
+          "owasp-appsensor": [],
+          "capec": [],
+          "safecode": [""]
+        }
+      }
+    ]
+  }
+}
