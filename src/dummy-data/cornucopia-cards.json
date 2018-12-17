@@ -124,7 +124,7 @@
         }
       },
       {
-        "number": "6",
+        "number": "7",
         "description": "Jan craft special special payloads to foil input validation, because the character set is not specified/enforced. or the data is encoded multiple times, or the data is not fully converted into the same format the application uses(e.g. canonicalization) before being validated, or variables are not strongly typed",
         "helptext": "",
         "help-resources": {

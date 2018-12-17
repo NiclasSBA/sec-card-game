@@ -1,14 +1,17 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import logo from "../logo.svg";
 import { BrowserRouter, Link } from "react-router-dom";
 import { io, openSocket } from "socket.io-client";
 import { subscribeToTimer } from "../api";
-
+import { findIndex, map } from 'lodash';
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 import { joinSocket, joinGameRoom } from "../actions/index";
 import GameRoom from "./GameRoom";
+import CheckboxList from "./UiComponents/CheckboxList";
+import SelectionView from "./UiComponents/SelectionView";
+import TabView from "./UiComponents/TabView";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -18,14 +21,25 @@ class Dashboard extends Component {
       socket: {},
       messages: [],
       currentChatRoom: "",
-      initialCards: {}
+      initialCards: {},
+      activeTabId: 0,
+      listOfSelectedCards: [],
+      currentGame : {
+        isActive: false,
+        isAdmin: false,
+        isCurrentPlayer: false,
+        cardsInHand: [],
+
+      }
     };
   }
 
-  componentWillMount() {}
+  componentWillMount() {
+    this.setInitialCardsForSelection();
+  }
 
   componentDidMount() {
-    this.setInitialCardsForSelection();
+    
     if (!this.props.socket) {
       var io = require("socket.io-client");
       var socket = io.connect("localhost:3001");
@@ -41,6 +55,8 @@ class Dashboard extends Component {
       socket.on("message send", function(data) {
         console.log(data);
       });
+      socket.on("game: set admin",this.handleAdmin);
+
       socket.on("message send2", function(data) {
         console.log(data);
       });
@@ -51,12 +67,16 @@ class Dashboard extends Component {
         socket.emit("game: ready to start", "Game room" )
       });
 
+
+      //make socketio even that listens for game start, and sets socket as host. when the socket.on('disconnect') fires, check if the socket was host, if it was, emit socket.emit('game: host left) to signal game end, and free up the room
+
       // the next 3 functions will be fired automatically on a disconnect.
       // the disconnect (the first function) is not required, but you know,
       // you can use it make some other good stuff.
 
       socket.on("disconnect", function() {
         console.log("Disconnected");
+        
       });
 
       socket.on("reconnect", function() {
@@ -69,6 +89,16 @@ class Dashboard extends Component {
     }
   }
 
+  handleAdmin = () => {
+    
+    var currentGame = {...this.state.currentGame}
+    //... spread operator needs to be first, otherwise, initial values overwrites what we want to set
+      currentGame = {...currentGame, isAdmin: true}   
+        this.setState({
+          currentGame
+        })
+     
+  }
   setInitialCardsForSelection = () => {
     var cards = require("../dummy-data/cornucopia-cards.json");
     this.setState({
@@ -85,8 +115,9 @@ class Dashboard extends Component {
     });
     console.log(messages)
   };
-  //Currently only takes all available cards, and puts then together for dealing out to sockets
-  dealCardsAndStartGame = room => {
+
+  countCards = () => {
+
     var datavalidation_cards = [
       ...this.state.initialCards.cards.dataValidationEncoding
     ];
@@ -118,9 +149,15 @@ class Dashboard extends Component {
     wildCards_cards.map(card => {
       countedCards.push({ suit: "wildcard", ...card });
     });
+    return countedCards;
+  }
+
+  //Currently only takes all available cards, and puts then together for dealing out to sockets
+  dealCardsAndStartGame = room => {
+     var countedCards = this.countCards();
     var dealtCards = [];
     
-    var countedCardsInitLength = countedCards.length;
+    // var countedCardsInitLength = countedCards.length;
     for(var i = countedCards.length - 1; i> 0; i--){
   
        var card = countedCards.splice(Math.floor(Math.random() * countedCards.length), 1);
@@ -146,7 +183,14 @@ class Dashboard extends Component {
     socket.emit("leave room", room);
     this.setState({
       currentChatRoom: "",
-      messages: []
+      messages: [],
+      currentGame : {
+        isActive: false,
+        isAdmin: false,
+        isCurrentPlayer: false,
+        cardsInHand: [],
+
+      }
     });
     console.clear();
   };
@@ -167,6 +211,45 @@ class Dashboard extends Component {
     var socket = this.state.socket;
     socket.emit("message notself", room);
   };
+
+  handleTabchange = (index) => {
+
+    this.setState({
+      activeTabId: index
+    })
+  }
+  toggleCheckbox = card => {
+    
+    var listOfSelectedCards = [...this.state.listOfSelectedCards]
+    var desc = card.description
+    var index = listOfSelectedCards.findIndex((card) =>   card.description === desc)
+    console.log("index",index)
+    console.log("is card in list before", listOfSelectedCards.includes(card))
+    console.log("list cards", listOfSelectedCards.includes(card))
+    console.log("index",index)
+    console.log("card",card)
+    if (index > -1) {
+      
+       listOfSelectedCards.splice(index, 1);
+      
+
+      console.log("Dashboard",listOfSelectedCards)
+      this.setState({
+        listOfSelectedCards
+      })
+    } else {
+      listOfSelectedCards.push(card)
+      console.log("list index",listOfSelectedCards)
+      this.setState({
+        listOfSelectedCards
+      })
+    }
+    
+    
+    console.log("wquals after",listOfSelectedCards)
+    console.log("is card in list after", listOfSelectedCards.includes(card))
+  }
+// }
   render() {
     return (
       <div>
@@ -177,10 +260,15 @@ class Dashboard extends Component {
           handleMessage={this.handleMessage}
           handleMessageToOthers={this.handleMessageToOthers}
           dealCardsAndStartGame={this.dealCardsAndStartGame}
+          user={this.state.currentGame}
         />
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>Dashboard</p>
-        <p>This is the timer value: </p>
+        <div className="list-wrapper">
+        {this.state.currentGame.isAdmin && <Fragment><TabView tabs={this.state.initialCards.cards} handleTabchange={this.handleTabchange}/> 
+         <SelectionView currentTab={this.state.activeTabId} tabs={this.state.initialCards.cards} toggleCheckbox={this.toggleCheckbox} listOfSelectedCards={this.state.listOfSelectedCards}/></Fragment>}
+       </div>
+        
         <nav>
           <div>
             <nav />

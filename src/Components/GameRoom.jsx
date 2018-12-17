@@ -36,7 +36,7 @@ class GameRoom extends Component {
           <button onClick={ () => this.props.handleLeave("Game room")}> Leave Room</button>
           <button onClick={ () => this.props.handleMessage("Game room test message")}> send message</button>
           <button onClick={ () => this.props.handleMessageToOthers("Game room")}> send message to others</button>
-          <button onClick={ () => this.props.dealCardsAndStartGame("Game room")}> Deal cards and start game</button>
+          {this.props.user.isAdmin && <button onClick={ () => this.props.dealCardsAndStartGame("Game room")}> Deal cards and start game</button>}
      
   
     
