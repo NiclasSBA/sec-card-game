@@ -12,3 +12,10 @@ To use this:
 6. To start serverside(https://github.com/NiclasSBA/sec-card-game-server): nodemon server.
 
 Currently the project uses port 3000/3001 as default
+
+
+
+The cards used as reference in this project belongs to OWASP: OWASP Cornucopia is free to use. It is licensed under the Creative Commons Attribution-ShareAlike 3.0 license, so you can copy, distribute and transmit the work, and you can adapt it, and use it commercially, but all provided that you attribute the work and if you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.
+
+
+Owasp does not endorse this project in any way shape or form
