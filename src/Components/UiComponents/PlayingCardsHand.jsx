@@ -42,7 +42,9 @@ class PlayingCardsHand extends Component {
 handleClick = () => {
 let {currentGame} = this.props;
   var currentCardToBePlayed = {...this.state.currentCardToBePlayed}
-if(currentGame.isCurrentPlayer && Object.keys(currentGame.currentCardInPlay).length > 0 && !this.props.currentGame.currentPlayerHasPlayedCard){
+  // console.log("currentgame", currentGame, "keys", currentGame.currentCardInPlay)
+  // console.log(Object.keys(currentGame.currentCardInPlay).length === 0)
+if(currentGame.isCurrentPlayer   && !this.props.currentGame.currentPlayerHasPlayedCard){
   // console.log(Object.keys(currentGame.currentCardInPlay).length === 0)
   this.props.sendCardToOtherSockets(currentCardToBePlayed)
 }

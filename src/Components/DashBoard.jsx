@@ -117,11 +117,12 @@ class Dashboard extends Component {
         inx = index;
       }
     });
-
+    console.log(inx)
     //  We want to remove the card, we just played, so it cant be played again
     // currently, we are not keeping track of previously played cards
-    if (inx > -1) cardsInHand.splice(inx, 1);
-
+    if (inx > -1) 
+      {cardsInHand.splice(inx, 1);
+      }
     this.setState({
       cardsInHand: cardsInHand,
       currentGame: { ...currentGame, currentPlayerHasPlayedCard: true }
