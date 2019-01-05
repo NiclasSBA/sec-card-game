@@ -123,7 +123,7 @@ class SideMenu extends Component {
                     {" "}
                     send message to others
                   </li> */}
-                  {this.props.currentGame.isActive && <li onClick={this.handleInputFocus}>
+                  {!this.props.currentGame.isActive && <li onClick={this.handleInputFocus}>
                     {" "}
                   <TextFieldCode onChange={this.handleText} handleClick={this.handleClick}  />
                     

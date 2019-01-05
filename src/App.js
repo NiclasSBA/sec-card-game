@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Provider } from 'react-redux'
 import { BrowserRouter as Router,Route, Link, Switch} from "react-router-dom";
 import Dashboard from "./Components/DashBoard";
 import About from "./Components/About";
@@ -26,9 +24,7 @@ class App extends Component {
       marginRight: "0 !important"}}>
         <header className="App-header">
          
-          {/* <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p> */}
+       
           
          
           <nav>
@@ -57,9 +53,7 @@ class App extends Component {
     </nav>
         </header>
         <ul id="messages"></ul>
-    {/* <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form> */}
+
    
  
     

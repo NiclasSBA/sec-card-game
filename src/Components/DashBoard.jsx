@@ -135,7 +135,7 @@ class Dashboard extends Component {
     lastClickedCard = {};
     currentGame.players.map((pUser, index) => {
       // User should refer to each socketusername, currently it doesnt
-      console.log("user from server side", user);
+      // console.log("user from server side", user);
       if (socket.id === "" + user.id) {
         console.log("found current user client side");
         // currentGame.players[index] ={id: socket.id,user: pUser, points: +1}
@@ -167,7 +167,7 @@ class Dashboard extends Component {
     var socket = this.state.socket;
     var currentGame = { ...this.state.currentGame };
     // currentGame.currentPlayer = (currentGame.currentPlayer) ? currentGame.currentPlayer : currentGame.currentPlayers[0]
-    console.log("move to next user, client side", currentGame);
+    // console.log("move to next user, client side", currentGame);
     socket.emit("game: move to next user", currentGame);
     // socket.emit("game: move to next user",currentGame.currentPlayer,currentGame.gameId);
   };
@@ -180,12 +180,12 @@ class Dashboard extends Component {
   handleUserPoints = user => {
     var socket = this.state.socket;
     var currentGame = { ...this.state.currentGame };
-    console.log("event received from server", socket.id);
+    // console.log("event received from server", socket.id);
 
     currentGame.players.map((pUser, index) => {
       // User should refer to each socketusername, currently it doesnt
 
-      console.log("map", pUser);
+      // console.log("map", pUser);
       // console.log("map userid from server", userId);
 
       currentGame.players[index] = { ...pUser };
