@@ -21,6 +21,7 @@ class Home extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>Home</p>
+          <ul style={{listStyle:"none"}}><li><a style={{textDecoration: "none", color: "white"}} href="/Dashboard">Game room</a></li><li><a style={{textDecoration: "none", color: "white"}} href="/About">About this project</a></li></ul>
           <nav>
           <div>
     <nav>
@@ -30,10 +31,7 @@ class Home extends Component {
   </div>
     </nav>
         </header>
-        <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
+     
 
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     

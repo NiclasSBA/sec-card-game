@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import CheckboxList from "./CheckboxList";
 import { connect } from "react-redux";
 import { joinSocket, joinGameRoom } from "../../actions/index";
-
+import { css } from 'emotion'
 class SelectionView extends Component {
   constructor(props) {
     super(props);
@@ -95,20 +95,23 @@ class SelectionView extends Component {
     return countedCards[index];
   };
 
+
   
   render() {
     return (
       <div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          {Object.keys(this.props.tabs).map(
+        <div className={container()}>
+        { Object.keys(this.props.tabs).map(
             (cardSuit, index) =>
               this.props.currentTab === index && (
                 
-                  <div>
+                  <div key={index}>
                     <CheckboxList
+                    
                       cards={this.props.tabs[cardSuit]}
                       cardSuit={cardSuit}
                       toggleCheckbox={this.props.toggleCheckbox}
+                      toggleAllCheckboxes={this.props.toggleAllCheckboxes}
                       listOfSelectedCards={this.props.listOfSelectedCards}
                     />{" "}
                   </div>
@@ -120,7 +123,14 @@ class SelectionView extends Component {
     );
   }
 }
+const container = () => css `
+display: flex;
 
+ justify-content: center;
+ width: 100vw;
+ flex-wrap: wrap;
+ align-items: flex-start;
+ `
 const mapStateToProps = state => ({
   // ...
 });
