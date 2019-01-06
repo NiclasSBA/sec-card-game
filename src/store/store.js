@@ -16,8 +16,10 @@ import socketIoMiddleware from 'redux-socket.io-middleware'
 // A reducer takes two parameters: the current state and an action
 const reducers  = (rootReducer);
 // const io = socketIO.connect("localhost:3001")
-const store = createStore(reducers,applyMiddleware(
-    ) +  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+// const store = createStore(reducers,applyMiddleware(
+//     ) +  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+//     );
+const store = createStore(reducers 
 );
 
 
