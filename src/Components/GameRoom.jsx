@@ -1,15 +1,8 @@
 import React, { Component } from "react";
-import logo from "../logo.svg";
-import { BrowserRouter, Link } from "react-router-dom";
-import { io, openSocket } from "socket.io-client";
-import { subscribeToTimer } from "../api";
 
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import * as actions from "../actions";
-import { joinSocket, joinGameRoom } from "../actions/index";
+
+
 import { css } from "emotion";
-import posed, { PoseGroup } from "react-pose";
 import SideMenu from "./UiComponents/SideMenu";
 import Highscore from "./UiComponents/Highscore";
 
@@ -88,12 +81,6 @@ const mapStateToProps = state => ({
   // ...
 });
 
-const mapDispatchToProps = dispatch => ({
-  joinSocket: socket => dispatch(joinSocket(socket)),
-  joinGameRoom: socket => dispatch(joinGameRoom(socket))
-});
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(GameRoom);
+
+export default GameRoom;

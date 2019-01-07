@@ -1,13 +1,7 @@
 import React, { Component, Fragment } from "react";
-import logo from "../logo.svg";
-import { BrowserRouter, Link } from "react-router-dom";
-import { io, openSocket } from "socket.io-client";
-import { subscribeToTimer } from "../api";
-import { findIndex, map } from "lodash";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import * as actions from "../actions";
-import { joinSocket, joinGameRoom } from "../actions/index";
+
+
+
 
 import { css } from "emotion";
 
@@ -56,12 +50,6 @@ const mapStateToProps = state => ({
   // ...
 });
 
-const mapDispatchToProps = dispatch => ({
-  joinSocket: socket => dispatch(joinSocket(socket)),
-  joinGameRoom: socket => dispatch(joinGameRoom(socket))
-});
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(About);
+
+export default About;

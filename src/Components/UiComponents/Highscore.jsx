@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { connect } from "react-redux";
+
 
 import { joinSocket, joinGameRoom } from "../../actions/index";
 import { css } from "emotion";
@@ -177,12 +177,5 @@ const mapStateToProps = state => ({
   // ...
 });
 
-const mapDispatchToProps = dispatch => ({
-  joinSocket: socket => dispatch(joinSocket(socket)),
-  joinGameRoom: socket => dispatch(joinGameRoom(socket))
-});
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Highscore);
+export default Highscore;

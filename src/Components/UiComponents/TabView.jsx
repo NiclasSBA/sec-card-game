@@ -1,11 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import CheckboxList from "./CheckboxList";
-import { connect } from 'react-redux'
-import { joinSocket, joinGameRoom } from '../../actions/index';
 import { css } from 'emotion'
 import posed, {PoseGroup} from 'react-pose';
 import colors from '../../base-styles/colors'
-const enhanceWithClickOutside = require('react-click-outside');
 class TabView extends Component {
     constructor(props) {
         super(props);
@@ -179,10 +176,6 @@ const mapStateToProps = (state) => ({
 });
 
 
-const mapDispatchToProps = dispatch => ({
-   joinSocket: socket => dispatch(joinSocket(socket)),
-   joinGameRoom: socket => dispatch(joinGameRoom(socket))
-  
-})
 
-export default connect(mapStateToProps,mapDispatchToProps)(TabView)
+
+export default TabView;
